@@ -1,0 +1,281 @@
+[2021-11-18 08:20:43] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php:670)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(236): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2021-11-18 08:20:52] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists (SQL: create table `bcontents` (`id` int unsigned not null auto_increment primary key, `title` varchar(255) not null, `contents` text not null, `tm` varchar(255) not null, `comment` int not null default '0', `tackback` int not null default '0', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists (SQL: create table `bcontents` (`id` int unsigned not null auto_increment primary key, `title` varchar(255) not null, `contents` text not null, `tm` varchar(255) not null, `comment` int not null default '0', `tackback` int not null default '0', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:665)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
+#1 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(460): Illuminate\\Database\\Connection->run('create table `b...', Array, Object(Closure))
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `b...')
+#3 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(245): Illuminate\\Database\\Schema\\Builder->create('bcontents', Object(Closure))
+#6 C:\\php-web\\sample2\\phplara\\database\\migrations\\2021_11_18_081725_create_bcontents_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateBcontentsTable->up()
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateBcontentsTable), 'up')
+#10 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\php-web\\\\samp...', 2, false)
+#11 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(34): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#20 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists at C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:459)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): PDOStatement->execute()
+#1 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(658): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `b...', Array)
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
+#3 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(460): Illuminate\\Database\\Connection->run('create table `b...', Array, Object(Closure))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `b...')
+#5 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(245): Illuminate\\Database\\Schema\\Builder->create('bcontents', Object(Closure))
+#8 C:\\php-web\\sample2\\phplara\\database\\migrations\\2021_11_18_081725_create_bcontents_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateBcontentsTable->up()
+#10 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateBcontentsTable), 'up')
+#12 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\php-web\\\\samp...', 2, false)
+#13 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(34): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#22 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2021-11-18 08:27:49] local.ERROR: View [kad08] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [kad08] not found. at C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:137)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('kad08', Array)
+#1 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(131): Illuminate\\View\\FileViewFinder->find('kad08')
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(975): Illuminate\\View\\Factory->make('kad08', Array, Array)
+#3 C:\\php-web\\sample2\\phplara\\app\\Http\\Controllers\\Kad08Controller.php(17): view('kad08', Array)
+#4 [internal function]: App\\Http\\Controllers\\Kad08Controller->index()
+#5 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#6 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
+#7 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Kad08Controller), 'index')
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(680): Illuminate\\Routing\\Route->run()
+#10 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\php-web\\sample2\\phplara\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 C:\\php-web\\sample2\\phplara\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 C:\\php-web\\sample2\\phplara\\server.php(21): require_once('C:\\\\php-web\\\\samp...')
+#45 {main}
+"} 
+[2021-11-18 08:29:42] local.ERROR: The "-r" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-r\" option does not exist. at C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php:120)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(102): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('refresh')
+#1 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(83): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-refresh')
+#2 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-11-18 08:29:47] local.ERROR: The "--refresh" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--refresh\" option does not exist. at C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php:203)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(147): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('refresh', NULL)
+#1 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(81): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--refresh')
+#2 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-11-18 08:29:53] local.ERROR: The "--fresh" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--fresh\" option does not exist. at C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php:203)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(147): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('fresh', NULL)
+#1 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\ArgvInput.php(81): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--fresh')
+#2 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-11-18 08:29:59] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists (SQL: create table `bcontents` (`id` int unsigned not null auto_increment primary key, `title` varchar(255) not null, `contents` text not null, `tm` varchar(255) not null, `comment` int not null default '0', `tackback` int not null default '0', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists (SQL: create table `bcontents` (`id` int unsigned not null auto_increment primary key, `title` varchar(255) not null, `contents` text not null, `tm` varchar(255) not null, `comment` int not null default '0', `tackback` int not null default '0', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:665)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
+#1 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(460): Illuminate\\Database\\Connection->run('create table `b...', Array, Object(Closure))
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `b...')
+#3 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(245): Illuminate\\Database\\Schema\\Builder->create('bcontents', Object(Closure))
+#6 C:\\php-web\\sample2\\phplara\\database\\migrations\\2021_11_18_081725_create_bcontents_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateBcontentsTable->up()
+#8 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateBcontentsTable), 'up')
+#10 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\php-web\\\\samp...', 2, false)
+#11 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(34): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#20 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'bcontents' already exists at C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:459)
+[stacktrace]
+#0 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): PDOStatement->execute()
+#1 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(658): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `b...', Array)
+#2 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
+#3 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(460): Illuminate\\Database\\Connection->run('create table `b...', Array, Object(Closure))
+#4 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `b...')
+#5 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(245): Illuminate\\Database\\Schema\\Builder->create('bcontents', Object(Closure))
+#8 C:\\php-web\\sample2\\phplara\\database\\migrations\\2021_11_18_081725_create_bcontents_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateBcontentsTable->up()
+#10 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateBcontentsTable), 'up')
+#12 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\php-web\\\\samp...', 2, false)
+#13 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(34): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#22 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\php-web\\sample2\\phplara\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\php-web\\sample2\\phplara\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\php-web\\sample2\\phplara\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
